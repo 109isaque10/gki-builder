@@ -72,6 +72,6 @@ jobs:
 
        export STATUS="${{ inputs.STATUS }}"
        export chat_id="${{ secrets.CHAT_ID }}"
-       export token="${{ secrets.GITHUB_TOKEN }}"
+       export token="${{ secrets.TOKEN }}"
 
        ./build.sh
