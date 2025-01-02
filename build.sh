@@ -124,8 +124,8 @@ elif [[ $USE_KSU_NEXT == "yes" ]] && [[ $USE_KSU == "yes" ]]; then
 fi
 
 ## Apply kernel patches
-git config --global user.email "kontol@example.com"
-git config --global user.name "Your Name"
+git config --global user.email "isaquevictor803@hotmail.com"
+git config --global user.name "109isaque10"
 
 ## SUSFS4KSU
 if [[ $USE_KSU == "yes" ]] || [[ $USE_KSU_NEXT == "yes" ]] && [[ $USE_KSU_SUSFS == "yes" ]]; then
