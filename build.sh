@@ -49,7 +49,7 @@ git clone --depth=1 "$ANYKERNEL_REPO" -b "$ANYKERNEL_BRANCH" $WORKDIR/anykernel
 ## Extract kernel version
 cd $WORKDIR/common
 KERNEL_VERSION=$(make kernelversion)
-ZIP_NAME=$(echo "$ZIP_NAME" | sed "s/KVER/$KERNEL_VERSION/g")
+ZIP_NAME=$(echo "$ZIP_NAME" | sed 's/KVER/$KERNEL_VERSION/g')
 cd $WORKDIR
 
 ## Download Toolchains
