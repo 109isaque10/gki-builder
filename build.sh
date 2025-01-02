@@ -97,6 +97,10 @@ fi
 
 COMPILER_STRING=$(clang -v 2>&1 | head -n 1 | sed 's/(https..*//' | sed 's/ version//')
 
+## Apply kernel patches
+git config --global user.email "isaquevictor803@hotmail.com"
+git config --global user.name "109isaque10"
+
 ## KSU or KSU-Next setup
 if [[ $USE_KSU_NEXT == "yes" ]]; then
     if [[ $USE_KSU_SUSFS == "yes" ]]; then
@@ -123,9 +127,7 @@ elif [[ $USE_KSU_NEXT == "yes" ]] && [[ $USE_KSU == "yes" ]]; then
     exit 1
 fi
 
-## Apply kernel patches
-git config --global user.email "isaquevictor803@hotmail.com"
-git config --global user.name "109isaque10"
+
 
 ## SUSFS4KSU
 if [[ $USE_KSU == "yes" ]] || [[ $USE_KSU_NEXT == "yes" ]] && [[ $USE_KSU_SUSFS == "yes" ]]; then
