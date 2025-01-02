@@ -152,7 +152,7 @@ if [[ $USE_KSU == "yes" ]] || [[ $USE_KSU_NEXT == "yes" ]] && [[ $USE_KSU_SUSFS 
         cp $SUSFS_PATCHES/include/linux/susfs.h ./include/linux/
         cp $SUSFS_PATCHES/fs/sus_su.c ./fs/
         cp $SUSFS_PATCHES/include/linux/sus_su.h ./include/linux/
-        patch -l -p1 <50_add_susfs_in_gki-$GKI_VERSION.patch || exit 1
+        patch -r reject.rej -p1 <50_add_susfs_in_gki-$GKI_VERSION.patch || exit 1
     fi
 
     SUSFS_VERSION=$(grep -E '^#define SUSFS_VERSION' ./include/linux/susfs.h | cut -d' ' -f3 | sed 's/"//g')
